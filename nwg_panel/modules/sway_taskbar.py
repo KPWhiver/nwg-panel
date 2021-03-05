@@ -83,10 +83,10 @@ class WorkspaceBox(Gtk.Box):
 
         check_key(settings, "workspace-buttons", False)
         if settings["workspace-buttons"]:
-            widget = Gtk.Button.new_with_label("{}{}".format(at_indicator, con.num))
+            widget = Gtk.Button.new_with_label("{}{}".format(at_indicator, con.name))
             widget.connect("clicked", self.on_click)
         else:
-            widget = Gtk.Label("{}{}:".format(at_indicator, con.num))
+            widget = Gtk.Label("{}{}".format(at_indicator, con.name))
 
         self.pack_start(widget, False, False, 4)
 
